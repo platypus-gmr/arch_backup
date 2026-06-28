@@ -1,0 +1,10 @@
+exec-once = dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+decoration {
+    blur {
+        enabled = true
+        size = 6
+        passes = 2
+        vibrancy = 0.8
+        vibraancy_darkness = 0.5
+    }
+}

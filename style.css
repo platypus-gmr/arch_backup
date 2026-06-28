@@ -1,0 +1,110 @@
+/* ============================================
+   WAYBAR STYLE — easy to customize
+   Change variables here to restyle everything
+   ============================================ */
+
+/* COLORS */
+/* Module background / / #1a1a2e */
+/* Module border /     / #00fffa */
+/* Text color /        / #00fffa */
+/* Bar background /    / transparent */
+
+/* SHAPE */
+/* Border radius (pill curvature) / / 20px = full pill, 8px = rounded rect */
+/* Border width /                   / 1px, 2px etc */
+/* Padding inside pill /            / 4px 12px = vertical horizontal */
+/* Gap between modules /            / set in config "spacing" */
+
+* {
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 13px;
+}
+
+window#waybar {
+    background: rgba(10, 10, 10, 0.6);
+    border: none;
+}
+
+#clock {
+    background-color: rgba(10, 10, 9, 0.8) ;
+    color: #c3faf9;
+    border: 1px solid #777777;
+    border-radius: 20px;
+    padding: 4px 12px;
+    margin: 6px 3px;
+}
+
+/* Battery */
+#battery {
+    background-color: rgba(10, 10, 9, 0.8);
+    color: #07b900;
+    border: 1px solid #777777;
+    border-radius: 20px;
+    padding: 4px 12px;
+    margin: 6px 3px;
+}
+
+#battery.warning {
+    color: #ffb347;
+    border-color: #ffb347;
+}
+
+#battery.critical {
+    color: #ff5555;
+    border-color: #ff5555;
+}
+
+/* Volume */
+#pulseaudio {
+    background-color: rgba(10, 10, 9, 0.8);
+    color: #dde3e3;
+    border: 1px solid #777777;
+    border-radius: 20px;
+    padding: 4px 12px;
+    margin: 6px 3px;
+}
+
+#pulseaudio.muted {
+    color: #555577;
+    border-color: #777777;
+}
+
+/* Network / WiFi */
+#network {
+    background-color: rgba(10, 10, 09, 0.8);
+    color: #07b900;
+    border: 1px solid #777777;
+    border-radius: 20px;
+    padding: 4px 12px;
+    margin: 6px 3px;
+}
+
+#network.disconnected {
+    color: #ff5555;
+    border-color: #ff5555;
+}
+
+/*bluetooth*/
+#bluetooth {
+    background-color: rgba(10, 10, 09, 0.8);
+    color: #5fffbb;
+    border: 1px solid #777777;
+    border-radius: 20px;
+    padding: 4px 12px;
+    margin: 6px 3px;
+}
+
+/* Power button */
+#custom-power {
+    background-color: rgba(10, 10, 09, 0.8);
+    color: #5bbbff;
+    border: 1px solid #ff5555;
+    border-radius: 20px;
+    padding: 4px 12px;
+    margin: 6px 3px;
+}
+
+#custom-power:hover {
+    background-color: #ff5555;
+    color: #1a1a2e;
+}
