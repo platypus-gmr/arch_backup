@@ -1,0 +1,67 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 40,
+    "spacing": 6,
+
+    "modules-left": ["clock"],
+    "modules-center": [],
+    "modules-right": ["custom/powerprofile", "cpu", "memory", "pulseaudio", "network","bluetooth", "battery", "custom/power"],
+
+    "clock": {
+        "format": " {:%H:%M}",
+        "tooltip": false
+    },
+
+    "battery": {
+        "interval": 60,
+        "format": "{icon} {capacity}%",
+        "format-icons": ["", "", "", "", ""],
+        "tooltip": false
+    },
+
+    "pulseaudio": {
+        "format": "{icon}",
+        "format-muted": "󰝟",
+        "format-icons": {
+            "default": ["󰕿", "󰖀", "󰕾"]
+        },
+        "on-click": "pavucontrol",
+        "tooltip": false
+    },
+
+    "network": {
+        "format-wifi": "󰤨",
+        "format-disconnected": "󰤭",
+        "format-ethernet": "󰈀",
+        "on-click": "kitty -e nmtui",
+        "tooltip": false
+    },
+    "bluetooth": {
+        "on-click": "~/.config/rofi/scripts/rofi-bluetooth"
+    },
+
+    "custom/power": {
+        "format": "󰐥",
+        "on-click": "~/.config/rofi/powermenu.sh",
+        "tooltip": false
+    },
+    "cpu": {
+        "format": " {usage}%",
+        "interval": 2,
+        "tooltip": false
+    },
+
+    "memory": {
+        "format": " {}%",
+        "interval": 2
+    },
+
+    "custom/powerprofile": {
+        "format": "{}",
+        "return-type": "json",
+        "interval": 5,
+        "exec": "~/.config/waybar/scripts/power-profile.sh",
+        "on-click": "~/.config/waybar/scripts/power-profile-toggle.sh"
+    }
+}
